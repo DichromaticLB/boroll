@@ -142,7 +142,7 @@
 					_this->alreadySeen.front().dematerialize();
 					_this->alreadySeen.pop_front();
 				}
-				_this->alreadySeen.push_front(post);
+				_this->alreadySeen.push_back(post);
 				success=_this->setImg(post.file);
 				_this->currentPostMutex.lock();
 				_this->inDisplay=post;
@@ -151,8 +151,8 @@
 			else if(!_this->alreadySeen.empty())
 			{
 				auto post=_this->alreadySeen.back();
-				_this->alreadySeen.pop_back();
-				_this->alreadySeen.push_front(post);
+				_this->alreadySeen.pop_front();
+				_this->alreadySeen.push_back(post);
 				success=_this->setImg(post.file);
 				_this->currentPostMutex.lock();
 				_this->inDisplay=post;
@@ -242,8 +242,8 @@
 
 			while(_backtrack&&alreadySeen.size())
 			{
-				materialized.push(alreadySeen.front());
-				alreadySeen.pop_front();
+				materialized.push(alreadySeen.back());
+				alreadySeen.pop_back();
 				_backtrack--;
 			}
 
