@@ -1,0 +1,47 @@
+configFile=config
+id=ROLL
+postNameContainer=posts
+postname=post
+postIdAttr=id
+postFormatAttr=file-ext
+ValidURLParams={file-url, large-file-url, preview-file-url}
+ValidFormatsVariable={jpg}
+postTags={tag-string}
+getURL=https://danbooru.donmai.us/posts.xml
+getURLPageParam=page
+
+getURLParams={paramGETLimit}
+#,paramGETRandom} This one doesnt work properly, if it's included in the collection above it provides random posts regardles of its value being t/f 
+paramGETRandom={random,true}
+paramGETLimit={limit,50}
+GETTags=post[tags]
+emptyPagesUntilStop=4
+
+getAutocompleteURL=https://danbooru.donmai.us/tags/autocomplete.xml
+getAutocompleteParam=search[name_matches]
+autocompleteContainer=tags
+autocompleteName=tag
+autocompleteValue=name
+autocompleteAlter=antecedent-name
+autocompleteCount=post-count
+autocompleteCat=category
+autocompleteCategoryTranslate={0,general, 1,artist, 3,copyright, 4,character}
+
+getAutocompleteParams={}
+
+
+#Miliseconds between Downloads
+RefreshDL=200
+sleepGranularity=20
+
+#How many seen posts stored for buffering and show if new stuff isnt coming (In tmp dir)
+LimitPostsBufferedEmtpy=10
+LimitPostsBuffered=5
+
+#How much to wait in between downloads
+materializationRate=200 
+
+#If u set this and minimize idk how to recover it, beware
+hideInTaskBar=0
+windowBGRGBA="rgba(255,255,255,0.0)"
+tagSeparator=" "

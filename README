@@ -1,0 +1,8 @@
+BOROLL allows you to dynamically fetch and display images from *Booru sites
+
+It's configured to work by default with https://danbooru.donmai.us
+
+
+
+acknowledgment:
+This software is based on pugixml library (http://pugixml.org). pugixml is Copyright (C) 2006-2018 Arseny Kapoulkine.

@@ -1,0 +1,46 @@
+#Temporal storage
+tmpDir=/tmp/Boroll
+welcome=res/welcome.jpg
+
+#Default tags on init  
+paramGETTagsDefault={gentoo_penguin_(kemono_friends)  1girl} 
+
+#Miliseconds between picture updates
+Refresh=2000
+
+#go back to page 1 after fetching the last
+ResetOnLastPage=1
+
+#try to keep the window always on top
+alwaysOnTop=1
+
+#Seen and manipulate window from workspace widget
+skipPager=0
+#Title bar
+decorated=0;
+keepMargins=1
+
+
+#Size parameters for modes: FIXED, EXPAND-FIX,EXPAND-EXTEND
+maxw=600
+maxh=600
+
+#Mode for changes in size and aspect ratio: FIXED, EXPAND-FIX,EXPAND-EXTEND,NO-CHANGE 
+displayMode=EXPAND-FIX
+
+# possible values: NEAREST, TILES, BILINEAR, HYPER, if you input anything else defaults to BILINEAR
+interpolationMode= BILINEAR
+
+#How many already seen pictures to store for rotation if no new incoming  
+LimitPostsBufferedSeen=5
+
+descriptionTags={tag-string-artist , tag-string-character, tag-string-meta, tag-string-general}
+
+#rules, format: NAME{TAG comparison(< > = !=) value)
+defaultRules={sfw}
+
+medres{image-width>800,image-height>800}
+highres{image-width>1600,image-height>1600}
+sfw{rating==s}
+nsfw{rating==e}
+highscore{score > 5}
