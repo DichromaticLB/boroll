@@ -6,3 +6,9 @@ It's configured to work by default with https://danbooru.donmai.us
 
 acknowledgment:
 This software is based on pugixml library (http://pugixml.org). pugixml is Copyright (C) 2006-2018 Arseny Kapoulkine.
+
+requirements to build:
+GNU Flex
+GNU Bison
+bibCurl4
+libgtkmm3.0
