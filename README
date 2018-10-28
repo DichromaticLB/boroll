@@ -10,5 +10,5 @@ This software is based on pugixml library (http://pugixml.org). pugixml is Copyr
 requirements to build:
 GNU Flex
 GNU Bison
-bibCurl4
+libCurl4
 libgtkmm3.0
